@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">UICompoment</string>
+    <string name="title_activity_flow_layout_actity">FlowLayoutActity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="a_fragment">A fragment</string>
+    <string name="b_fragment">B fragment</string>
+    <string name="c_fragment">C fragment</string>
+    <string name="d_fragment">D fragment</string>
+
+    <string name="left">左侧</string>
+    <string name="right">右侧</string>
+
+    <string name="first">first</string>
+    <string name="second">second</string>
+    <string name="three">three</string>
+    <string name="four">four</string>
+</resources>
