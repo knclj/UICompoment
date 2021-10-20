@@ -1,3 +1,4 @@
+include ':LazyLoad'
 include ':PotoView'
 include ':app'
 rootProject.name = "UICompoment"

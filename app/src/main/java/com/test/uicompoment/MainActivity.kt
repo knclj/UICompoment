@@ -4,8 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.test.main.LazyLoadActivity
 import com.test.potoview.PhotoViewActivity
-import com.test.touchevent.SRL_VP_main
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,6 +22,10 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.btn_touchEvent).setOnClickListener {
             val intent = Intent(this,PhotoViewActivity::class.java)
+            this.startActivity(intent)
+        }
+        findViewById<Button>(R.id.btn_LazyLoad).setOnClickListener {
+            val intent = Intent(this,LazyLoadActivity::class.java)
             this.startActivity(intent)
         }
     }
