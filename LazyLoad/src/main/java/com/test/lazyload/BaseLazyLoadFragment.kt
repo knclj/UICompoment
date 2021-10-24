@@ -11,7 +11,7 @@ import com.test.utils.LogUtil
  *
  *ViewPage 旧版本懒加载实现方案
  */
-abstract class LazyLoadFragment() : Fragment() {
+abstract class BaseLazyLoadFragment() : Fragment() {
 
     private var rootView:View?= null;
     private var isCreateViewed = false
@@ -70,7 +70,7 @@ abstract class LazyLoadFragment() : Fragment() {
     private fun dispatchChildVisible(visible: Boolean){
        val fragmentManager = parentFragmentManager
         fragmentManager.fragments.forEach {
-            if (!it.isHidden && it.userVisibleHint &&it is LazyLoadFragment){
+            if (!it.isHidden && it.userVisibleHint &&it is BaseLazyLoadFragment){
                 it.dispatchVisible(visible)
             }
         }
@@ -79,7 +79,7 @@ abstract class LazyLoadFragment() : Fragment() {
     //需要实现双层嵌套
     private fun isParentVisible(): Boolean {
         val fragment = parentFragment
-        if(fragment is LazyLoadFragment){
+        if(fragment is BaseLazyLoadFragment){
             return !fragment.isVisibleShowed
         }
         return requireParentFragment().userVisibleHint
