@@ -33,7 +33,7 @@ public class LazyLoadActivity extends AppCompatActivity {
         // ViewPage Adapter 绑定
         MyFragmentPagerAdapter adapter = new MyFragmentPagerAdapter(getSupportFragmentManager(), getShowData());
         viewPager.setAdapter(adapter);
-        viewPager.setOffscreenPageLimit(8); // 0没有效果,内部会给你赋值1
+        viewPager.setOffscreenPageLimit(1); // 0没有效果,内部会给你赋值1
         viewPager.setOnPageChangeListener(viewpagerChangeListener);
     }
 
