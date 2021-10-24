@@ -8,7 +8,6 @@ import androidx.fragment.app.Fragment
 import com.test.utils.LogUtil
 
 /**
- *
  *ViewPage 旧版本懒加载实现方案
  */
 abstract class BaseLazyLoadFragment() : Fragment() {

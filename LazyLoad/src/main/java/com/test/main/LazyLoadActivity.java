@@ -15,8 +15,6 @@ import com.test.lazyload.R;
 import java.util.ArrayList;
 import java.util.List;
 
-// ViewPager + Fragment 【使用篇】 == 工作过一年 都知道
-// 同学们：关于ViewPager + Fragment 的基本使用，这里就简单过了下了，希望同学们能理解哈
 public class LazyLoadActivity extends AppCompatActivity {
 
     private ViewPager viewPager; // v4

@@ -3,5 +3,6 @@
     package="com.test.lazyload">
     <application>
         <activity android:name="com.test.main.LazyLoadActivity"></activity>
+        <activity android:name="com.test.main.MyLazyLoadActivity"></activity>
     </application>
 </manifest>
