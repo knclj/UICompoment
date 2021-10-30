@@ -52,7 +52,7 @@ abstract class BaseLazyLoadFragment() : Fragment() {
 
     private fun dispatchVisible(isVisibleToUser: Boolean){
         isVisibleShowed = isVisibleToUser
-        if(isVisibleToUser && !isParentVisible()){
+        if(isVisibleToUser && isParentNoVisible()){
             return
         }
         if(isVisibleToUser){
@@ -67,7 +67,7 @@ abstract class BaseLazyLoadFragment() : Fragment() {
     }
 
     private fun dispatchChildVisible(visible: Boolean){
-       val fragmentManager = parentFragmentManager
+       val fragmentManager = childFragmentManager
         fragmentManager.fragments.forEach {
             if (!it.isHidden && it.userVisibleHint &&it is BaseLazyLoadFragment){
                 it.dispatchVisible(visible)
@@ -76,12 +76,12 @@ abstract class BaseLazyLoadFragment() : Fragment() {
     }
 
     //需要实现双层嵌套
-    private fun isParentVisible(): Boolean {
+    private fun isParentNoVisible(): Boolean {
         val fragment = parentFragment
         if(fragment is BaseLazyLoadFragment){
             return !fragment.isVisibleShowed
         }
-        return requireParentFragment().userVisibleHint
+        return false
     }
 
     abstract fun getLayoutId():Int

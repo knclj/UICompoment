@@ -35,14 +35,25 @@
         />
 
     <Button
+        android:id="@+id/btn_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btn_touchEvent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Fragment"
+        />
+
+    <Button
         android:id="@+id/btn_LazyLoad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/btn_touchEvent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:text="lazyLoad"
+        android:text="LazyLoad"
         />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

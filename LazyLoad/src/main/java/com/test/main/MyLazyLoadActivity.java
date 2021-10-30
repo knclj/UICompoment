@@ -1,6 +1,7 @@
 package com.test.main;
 
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
@@ -22,6 +23,11 @@ public class MyLazyLoadActivity extends AppCompatActivity {
     private BottomNavigationView navigationView; // Tab 5个
 
     @Override
+    public void onSaveInstanceState(@NonNull Bundle outState, @NonNull PersistableBundle outPersistentState) {
+        super.onSaveInstanceState(outState, outPersistentState);
+    }
+
+    @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_lazy_load);
@@ -30,20 +36,20 @@ public class MyLazyLoadActivity extends AppCompatActivity {
         navigationView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener);
 
         // ViewPage Adapter 绑定
-        MyFragmentPagerAdapter adapter = new MyFragmentPagerAdapter(getSupportFragmentManager(), getShowData());
+        MyLazyLoadPagerAdapter adapter = new MyLazyLoadPagerAdapter(getSupportFragmentManager(), getShowData());
         viewPager.setAdapter(adapter);
         viewPager.setOffscreenPageLimit(1); // 0没有效果,内部会给你赋值1
         viewPager.setOnPageChangeListener(viewpagerChangeListener);
     }
 
     // 展示五个Fragment
-    private final List<Fragment> getShowData() {
-        List<Fragment> fragmentList = new ArrayList<>();
-        fragmentList.add(MyFragment.newInstance(1));
-        fragmentList.add(MyFragment.newInstance(2));
-        fragmentList.add(MyFragment.newInstance(3));
-        fragmentList.add(MyFragment.newInstance(4));
-        fragmentList.add(MyFragment.newInstance(5));
+    private final List<MyLazyLoadFragment> getShowData() {
+        List<MyLazyLoadFragment> fragmentList = new ArrayList<>();
+        fragmentList.add(MyLazyLoadFragment.newInstance(1));
+        fragmentList.add(MyLazyLoadFragment.newInstance(2));
+        fragmentList.add(MyLazyLoadFragment.newInstance(3));
+        fragmentList.add(MyLazyLoadFragment.newInstance(4));
+        fragmentList.add(MyLazyLoadFragment.newInstance(5));
         return fragmentList;
     }
 
