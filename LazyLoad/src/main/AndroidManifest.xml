@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.test.lazyload">
+
     <application>
-        <activity android:name="com.test.main.LazyLoadActivity"></activity>
-        <activity android:name="com.test.main.MyLazyLoadActivity"></activity>
+        <activity android:name="com.test.main.MainVPActivity"></activity>
+        <activity android:name="com.test.main.LazyLoadActivity" />
+        <activity android:name="com.test.main.MyLazyLoadActivity" />
     </application>
+
 </manifest>

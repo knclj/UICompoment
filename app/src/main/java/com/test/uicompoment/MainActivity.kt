@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import com.test.main.LazyLoadActivity
+import com.test.main.MainVPActivity
 import com.test.main.MyLazyLoadActivity
 import com.test.potoview.PhotoViewActivity
 
@@ -32,6 +33,11 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.btn_LazyLoad).setOnClickListener {
             val intent = Intent(this, MyLazyLoadActivity::class.java)
+            this.startActivity(intent)
+        }
+
+        findViewById<Button>(R.id.btn_VPFragment).setOnClickListener {
+            val intent = Intent(this, MainVPActivity::class.java)
             this.startActivity(intent)
         }
     }
