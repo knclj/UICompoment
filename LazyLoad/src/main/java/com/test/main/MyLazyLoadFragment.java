@@ -143,6 +143,16 @@ public class MyLazyLoadFragment extends BaseLazyLoadFragment {
     };
 
     @Override
+    public void onLazyLoad() {
+        Log.d(TAG, tabIndex + " fragment " + "onLazyLoad: " );
+    }
+
+    @Override
+    public void onStopLazyLoad() {
+        Log.d(TAG, tabIndex + " fragment " + "onStopLazyLoad: " );
+    }
+
+    @Override
     public int getLayoutId() {
         return R.layout.fragment_lazy_loading;
     }
