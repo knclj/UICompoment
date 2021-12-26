@@ -2,3 +2,7 @@ include ':LazyLoad'
 include ':PotoView'
 include ':app'
 rootProject.name = "UICompoment"
+include ':customview'
+include ':ApplicationLifeCompoment-annotions'
+include ':ApplicationLifeCompoment-api'
+include ':ApplicationLifeCompoment-compiler'

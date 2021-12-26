@@ -11,6 +11,14 @@
       <entry name="!?*.kt" />
       <entry name="!?*.clj" />
     </wildcardResourcePatterns>
-    <bytecodeTargetLevel target="1.8" />
+    <bytecodeTargetLevel target="1.7">
+      <module name="UICompoment.app" target="1.8" />
+      <module name="UICompoment.ApplicationLifeCompoment-api" target="1.8" />
+      <module name="UICompoment.ApplicationLifeComponent-api" target="1.8" />
+      <module name="UICompoment.ApplicationLifeComponent-compiler" target="1.8" />
+      <module name="UICompoment.customview" target="1.8" />
+      <module name="UICompoment.LazyLoad" target="1.8" />
+      <module name="UICompoment.PotoView" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

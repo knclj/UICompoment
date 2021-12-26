@@ -12,9 +12,13 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/ApplicationLifeCompoment-annotions" />
+            <option value="$PROJECT_DIR$/ApplicationLifeCompoment-api" />
+            <option value="$PROJECT_DIR$/ApplicationLifeCompoment-compiler" />
             <option value="$PROJECT_DIR$/LazyLoad" />
             <option value="$PROJECT_DIR$/PotoView" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/customview" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
