@@ -4,18 +4,19 @@ plugins {
     id 'kotlin-kapt'
 
 }
-
+def androidID = rootProject.ext.androidId
+def appId = rootProject.ext.appId
 android {
-    compileSdkVersion 30
+    compileSdkVersion androidID.compileSdkVersion
 
     defaultConfig {
-        applicationId "com.test.uicompoment"
-        minSdkVersion 21
-        targetSdkVersion 30
-        versionCode 1
-        versionName "1.0"
+        applicationId appId.appHostId
+        minSdkVersion androidID.minSdkVersion
+        targetSdkVersion androidID.targetSdkVersion
+        versionCode androidID.versionCode
+        versionName androidID.versionName
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner androidID.testInstrumentationRunner
     }
 
     buildTypes {

@@ -3,17 +3,19 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-kapt'
 }
+def androidID = rootProject.ext.androidId
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion androidID.compileSdkVersion
 
     defaultConfig {
-        minSdkVersion 21
-        targetSdkVersion 30
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion androidID.minSdkVersion
+        targetSdkVersion androidID.targetSdkVersion
+        versionCode androidID.versionCode
+        versionName androidID.versionName
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner androidID.testInstrumentationRunner
+        consumerProguardFiles androidID.consumerProguardFiles
     }
 
     buildTypes {
