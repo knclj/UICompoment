@@ -10,8 +10,6 @@ android {
     defaultConfig {
         minSdkVersion androidID.minSdkVersion
         targetSdkVersion androidID.targetSdkVersion
-        versionCode androidID.versionCode
-        versionName androidID.versionName
 
         testInstrumentationRunner androidID.testInstrumentationRunner
         consumerProguardFiles androidID.consumerProguardFiles

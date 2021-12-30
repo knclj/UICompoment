@@ -12,4 +12,12 @@ ext{
     appId = [
             appHostId:"com.test.uicompoment"
     ]
+
+    dependenciesId = [
+            "kotlin-stdlib":"org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version",
+            "core-ktx":'androidx.core:core-ktx:1.2.0',
+            "appcompat":'androidx.appcompat:appcompat:1.3.0',
+            "material":'com.google.android.material:material:1.4.0',
+            "constraintlayout":'androidx.constraintlayout:constraintlayout:2.0.4',
+    ]
 }
