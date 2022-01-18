@@ -52,5 +52,4 @@ dependencies {
     implementation project(':LazyLoad')
     implementation project(':customview')
     implementation project(path:':ApplicationLifeCompoment-api')
-    annotationProcessor project(':ApplicationLifeCompoment-compiler')
 }

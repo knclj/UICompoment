@@ -1,6 +1,7 @@
 package com.test.applicationlifecompoment_compiler
 
 import com.google.auto.service.AutoService
+import com.test.BaseProcessor
 import com.test.applicationlifecompoment_annotions.ApplicationLifeComponent
 import java.io.BufferedReader
 import java.io.PrintWriter
@@ -17,23 +18,12 @@ import javax.tools.StandardLocation
 import kotlin.collections.ArrayList
 
 @AutoService(Processor::class)
-class ApplicationLifeCompomentProcessor : AbstractProcessor() {
-
-    /**
-     * 控制台log输出
-     */
-    private var mLogger:Messager? = null
-
-    /**
-     * 类型工具
-     */
-    private var mTypesUtils: Types? = null
+class ApplicationLifeCompomentProcessor : BaseProcessor() {
 
     private var mModuleAbilityType:TypeMirror? = null
 
     private val interfaceMapResult = hashMapOf<String,List<String>>()
 
-    private var filer:Filer? = null
 
     override fun getSupportedSourceVersion(): SourceVersion {
         return SourceVersion.latestSupported()
@@ -45,10 +35,7 @@ class ApplicationLifeCompomentProcessor : AbstractProcessor() {
 
     override fun init(processingEnv: ProcessingEnvironment?) {
         super.init(processingEnv)
-        mLogger = processingEnv?.messager
-        mTypesUtils = processingEnv?.typeUtils
         mModuleAbilityType = processingEnv?.elementUtils?.getTypeElement(SERVICE_NAME)?.asType()
-        filer = processingEnv?.filer
     }
 
     override fun process(

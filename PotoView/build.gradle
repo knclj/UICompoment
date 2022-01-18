@@ -5,6 +5,12 @@ plugins {
 }
 def androidID = rootProject.ext.androidId
 
+kapt{
+    arguments {
+        arg("moduleName", project.getName())
+    }
+}
+
 android {
     compileSdkVersion androidID.compileSdkVersion
 
@@ -44,5 +50,6 @@ dependencies {
     implementation project(path:':ApplicationLifeCompoment-annotions')
     implementation project(path:':ApplicationLifeCompoment-api')
     kapt project(':ApplicationLifeCompoment-compiler')
+
 
 }
